@@ -1,4 +1,5 @@
 
+
 function typeWriter(elemento) {
   const textoarray = elemento.innerHTML.split("");
   elemento.innerHTML = "";

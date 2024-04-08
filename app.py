@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 from config import email,senha
 from flask_mail import Message, Mail
 
@@ -58,6 +58,10 @@ def enviar_email():
     mensagem = "Mensagem enviada com sucesso!"
 
     return render_template('contato.html', mensagem=mensagem)
+
+@app.route('/download_cv')
+def download_cv():
+    return send_file('static/image/Vinicius Ferreira.pdf', as_attachment=True)
 
 if __name__ == "__main__":
     app.run(debug=True)
