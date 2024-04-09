@@ -1052,9 +1052,6 @@ main h3 {
   }
 }
 @media screen and (max-width: 540px) {
-  .sobremim p {
-    text-align: center;
-  }
   main {
     padding-top: 7vh;
   }
