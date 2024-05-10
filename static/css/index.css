@@ -696,9 +696,7 @@ main h3 {
 .vitrine > * {
   transition: filter 0.4s;
 }
-.vitrine:hover > *:not(:hover) {
-  filter: blur(5px);
-}
+
 .vitrine > :hover {
   filter: none;
 }
