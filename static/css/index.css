@@ -468,6 +468,10 @@ main h3 {
 }
 .experiencias {
   color: var(--cor--padrao);
+  padding-bottom: 20px;
+}
+.sobremim{
+  padding-bottom: 20px;
 }
 .experiencias-box {
   display: flex;
