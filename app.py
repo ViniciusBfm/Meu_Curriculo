@@ -61,7 +61,7 @@ def enviar_email():
 
 @app.route('/download_cv')
 def download_cv():
-    return send_file('static/image/Vinicius Ferreira.pdf', as_attachment=True)
+    return send_file('static/image/Vinicius Ferreira - Completo.pdf', as_attachment=True)
 
 if __name__ == "__main__":
     app.run(debug=True)
