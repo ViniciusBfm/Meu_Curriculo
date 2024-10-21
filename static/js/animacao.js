@@ -19,17 +19,7 @@ window.addEventListener("resize", () => {
         });
         sr.reveal(".publico-alvo-infos", {
             duration: 1500,
-            delay: 1500,
-            scale: 1.1
-        });
-        sr.reveal(".linguagens", {
-            duration: 1500,
-            delay: 2500,
-            scale: 0.85
-        });
-        sr.reveal(".vamosconversar", {
-            duration: 1500,
-            delay: 3500,
+            delay: 1100,
             scale: 1.1
         });
         sr.reveal(".minhas-experiencias", {

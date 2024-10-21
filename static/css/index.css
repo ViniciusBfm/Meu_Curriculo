@@ -549,11 +549,8 @@ main h3 {
   flex-direction: column;
   gap: 5px;
 }
-.educacao-box ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
+.educacao-box li {
+  margin-top: 5px;
 }
 .educacao-box ul p {
   color: var(--cor--textoSobreMim);
@@ -561,7 +558,7 @@ main h3 {
 }
 .educacao-box ul h4 {
   font-weight: 500;
-  margin: 8px 0;
+  margin: 2px 0;
   font-size: 1rem;
 }
 .cursos-box,
@@ -979,7 +976,7 @@ main h3 {
     gap: 3px;
     background-color: var(--cor-principal);
     position: absolute;
-    top: 11vh;
+    top: 9vh;
     left: -280px;
     width: 50%;
     max-width: 280px;
