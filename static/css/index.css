@@ -92,7 +92,7 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 35px;
+  margin-top: 20px;
   padding-left: 3%;
 }
 .header-nome-container-img img {
@@ -119,8 +119,8 @@ header {
   z-index: 2;
 }
 .header-imagem .circle {
-  width: 10%;
-  height: 10%;
+  width: 83%;
+  height: 95%;
   background-color: var(--cor--padraoContorno);
   position: absolute;
   top: 50%;
@@ -129,19 +129,6 @@ header {
   z-index: 888;
   border-radius: 100%;
   z-index: 1;
-}
-.header-imagem:hover .circle {
-  animation: ciruclo 1s forwards;
-}
-@keyframes ciruclo {
-  0% {
-    width: 10%;
-    height: 10%;
-  }
-  100% {
-    width: 83%;
-    height: 95%;
-  }
 }
 .header-frases {
   padding-left: 3%;
@@ -222,7 +209,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 79%;
   height: 11vh;
   padding: 2%;
   position: fixed;
@@ -356,7 +343,7 @@ main {
   width: 100%;
   height: auto;
   background-color: var(--cor-principal);
-  padding: 2%;
+  padding: 15px;
   border: 1px solid var(--cor-secundaria);
   border-radius: var(--border--radius--padrao);
 }
@@ -388,7 +375,7 @@ main h3 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 2%;
+  padding: 15px;
   border: 1px solid var(--cor-secundaria);
   border-radius: var(--border--radius--padrao);
 }
@@ -404,7 +391,7 @@ main h3 {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 2%;
+  padding: 15px;
   gap: 20px;
   border: 1px solid var(--cor-secundaria);
   border-radius: var(--border--radius--padrao);
@@ -431,7 +418,7 @@ main h3 {
 }
 .linguagens {
   background-color: var(--cor-principal);
-  padding: 2%;
+  padding: 15px;
   width: 50%;
   border: 1px solid var(--cor-secundaria);
   border-radius: var(--border--radius--padrao);
@@ -450,7 +437,7 @@ main h3 {
 }
 .vamosconversar {
   width: 50%;
-  padding: 2%;
+  padding: 15px;
   background-color: var(--cor-principal);
   border: 1px solid var(--cor-secundaria);
   border-radius: var(--border--radius--padrao);
@@ -502,7 +489,7 @@ main h3 {
   background-color: var(--cor-principal);
   border: 1px solid var(--cor-secundaria);
   border-radius: var(--border--radius--padrao);
-  padding: 2%;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -511,7 +498,7 @@ main h3 {
   width: 30%;
   background-color: var(--cor-principal);
   border: 1px solid var(--cor-secundaria);
-  padding: 2%;
+  padding: 15px;
   border-radius: var(--border--radius--padrao);
   display: flex;
   flex-direction: column;
@@ -547,7 +534,7 @@ main h3 {
   background-color: var(--cor-principal);
   border-radius: var(--border--radius--padrao);
   border: 1px solid var(--cor-secundaria);
-  padding: 2%;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -570,7 +557,7 @@ main h3 {
   background-color: var(--cor-principal);
   border-radius: var(--border--radius--padrao);
   border: 1px solid var(--cor-secundaria);
-  padding: 2%;
+  padding: 15px;
 }
 .cursos-box {
   display: flex;
@@ -622,7 +609,7 @@ main h3 {
   background-color: var(--cor-principal);
   border-radius: var(--border--radius--padrao);
   border: 1px solid var(--cor-secundaria);
-  padding: 2%;
+  padding: 15px;
 }
 .portfolio-titulo p {
   color: var(--cor--textoSobreMim);
@@ -689,6 +676,12 @@ main h3 {
 .contato-box{
   padding-bottom: 50px;
 }
+.contato-titulo{
+  background-color: var(--cor-principal);
+  border: 1px solid var(--cor-secundaria);
+  border-radius: var(--border--radius--padrao);
+  padding: 15px;
+}
 .vitrine {
   width: auto;
   min-height: auto;
@@ -704,7 +697,6 @@ main h3 {
 .vitrine > :hover {
   filter: none;
 }
-
 .vitrine-box {
   width: 48%;
   height: 50vh;
@@ -740,7 +732,7 @@ main h3 {
   color: var(--cor--textoSobreMim);
 }
 .vitrine-txt {
-  padding: 2%;
+  padding: 15px;
   background-color: #000000bb;
   backdrop-filter: blur(5px);
   width: 100%;
@@ -776,10 +768,9 @@ main h3 {
   align-items: center;
   justify-content: center;
 }
-.
 .contato-titulo {
   width: 100%;
-  padding: 2%;
+  padding: 15px;
   background-color: var(--cor-principal);
 }
 .contato-titulo p {
@@ -799,11 +790,16 @@ main h3 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 50%;
   background-color: var(--cor-principal);
   border-radius: var(--border--radius--padrao);
   border: 1px solid var(--cor-secundaria);
-  padding: 2%;
+  padding: 15px;
+}
+.contato-info{
+  width: 40%;
+}
+.contato form{
+  width: 60%;
 }
 .tamanho {
   width: 100%;
@@ -871,11 +867,19 @@ main h3 {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.info-box-container{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
 }
 .info-box {
-  width: 70%;
+  width: 90%;
   display: flex;
   align-items: center;
   gap: 30px;
