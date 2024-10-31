@@ -1,4 +1,4 @@
-//window.addEventListener("resize", () => {
+window.addEventListener("resize", () => {
     if (window.innerWidth > 1200) {
         window.sr = ScrollReveal({ reset: true });
         sr.reveal(".apresentacao-button", {
