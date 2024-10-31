@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 :root {
   --cor-principal: #0a080d;
@@ -58,15 +59,11 @@ body {
 li {
   list-style: none;
 }
-a {
-  text-decoration: none;
-}
 header {
   width: 40%;
   position: fixed;
   left: 0;
   top: 0;
-  z-index: var(--cor--padraoContorno);
   max-width: 280px;
   height: 100vh;
   display: flex;
@@ -85,7 +82,7 @@ header {
 }
 .header-container h1 {
   font-family: var(--texto-titulo);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--cor--padrao);
 }
 .header-nome-container {
@@ -114,7 +111,6 @@ header {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  z-index: var(--cor--padraoContorno);
   position: relative;
   z-index: 2;
 }
@@ -126,7 +122,6 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 888;
   border-radius: 100%;
   z-index: 1;
 }
@@ -134,12 +129,12 @@ header {
   padding-left: 3%;
 }
 .header-frases h3 {
-  font-size: 0.8rem;
+  font-size: 15px;
   color: var(--cor--padraoContorno);
   font-family: var(--texto-padrao);
 }
 .header-frases h4 {
-  font-size: 1rem;
+  font-size: 14px;
   color: white;
   font-family: var(--texto-padrao);
   font-weight: normal;
@@ -148,10 +143,14 @@ header {
   width: 100%;
   height: auto;
 }
-.header-button a {
+.menu-desktop a{
+  text-decoration: none;
+}
+.header-button a, .conversar {
   padding: 7px 35px;
   font-size: 1rem;
   color: var(--cor--padrao);
+  border: 1px solid var(--cor--padraoContorno);
   border-radius: var(--border--radius--padrao);
   cursor: pointer;
   font-family: var(--texto-padrao);
@@ -166,11 +165,13 @@ header {
   color: var(--cor--padrao);
   font-weight: 500;
   transition: linear 500ms;
+  text-decoration: none;
 }
 .header-button a:hover,
 nav .conversar:hover,
 .oque-faco a:hover {
   background-color: var(--cor--padraoContornoEscuro);
+  border: 1px solid var(--cor--padraoContorno);
 }
 .header-redes-sociais {
   display: flex;
@@ -219,9 +220,23 @@ nav {
   z-index: 998;
 }
 nav ul {
-  width: auto;
+  width: 100%;
+  height: auto;
   display: flex;
-  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+nav ul div{
+  display: flex;
+  font-size: 1rem;
+  color: var(--cor--padrao);
+  border: 0;
+  cursor: pointer;
+  font-family: var(--texto-padrao);
+  font-weight: 400;
+  font-style: bold;
+  transition: linear 200ms;
 }
 nav ul li a,
 nav .conversar {
@@ -246,7 +261,7 @@ nav ul li a:hover {
   cursor: pointer;
   display: none;
 }
-.menu-box {
+.menu-box, .conversar-mobile {
   display: none;
 }
 nav .conversar {
@@ -281,6 +296,7 @@ nav .conversar {
 }
 .pagina-inicial .apresentacao h1 {
   font-size: clamp(1.5vw, 3rem, 3.5rem);
+  font-weight: 600;
 }
 .pagina-inicial .apresentacao h1::after {
   content: "|";
@@ -300,7 +316,7 @@ nav .conversar {
 }
 .pagina-inicial .apresentacao h2 {
   font-size: 1.5rem;
-  font-weight: normal;
+  font-weight: 500;
   font-style: italic;
   color: var(--cor--padraoContorno);
 }
@@ -313,7 +329,7 @@ nav .conversar {
 .apresentacao-button a {
   padding: 7px 20px;
   background-color: transparent;
-  border: 1px solid var(--cor-secundaria);
+  border: 2px solid var(--cor-secundaria);
   color: white;
   cursor: pointer;
   border-radius: var(--border--radius--padrao);
@@ -324,6 +340,7 @@ nav .conversar {
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: 300ms;
 }
 .apresentacao-button button:hover,
 .apresentacao-button a:hover {
@@ -452,6 +469,7 @@ main h3 {
   justify-content: space-between;
   align-items: flex-end;
   height: 90%;
+  text-decoration: none;
 }
 .experiencias {
   color: var(--cor--padrao);
@@ -466,17 +484,13 @@ main h3 {
   align-items: stretch;
   gap: 10px;
 }
-.experiencias-box ul li {
-  margin-bottom: 10px;
+.experiencias-trabalhos{
+  margin-top: 5px;
 }
-.experiencias-box ul li div {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.experiencias-box ul li div h4 {
-  font-weight: 400;
+.experiencias-cada-box h4{
   font-size: 1rem;
+  display: flex;
+  gap: 7px;
 }
 .experiencias-box p {
   font-size: 0.9rem;
@@ -503,9 +517,14 @@ main h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 5px;
+  align-items: center;
+  gap: 7px;
 }
-.oque-faco ul li {
+.oque-faco h3{
+  width: 100%;
+}
+.oque-faco div {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -523,13 +542,17 @@ main h3 {
   font-size: 0.9rem;
   background-color: ;
 }
+.oque-faco h4{
+  font-size: 16px;
+  width: 100%;
+}
 .educacao-cursos-box {
   display: flex;
   align-items: stretch;
   gap: 10px;
 }
 .educacao-box {
-  width: 63%;
+  width: 50%;
   height: auto;
   background-color: var(--cor-principal);
   border-radius: var(--border--radius--padrao);
@@ -539,40 +562,36 @@ main h3 {
   flex-direction: column;
   gap: 5px;
 }
-.educacao-box li {
-  margin-top: 5px;
-}
-.educacao-box ul p {
+.educacao-box h1 {
   color: var(--cor--textoSobreMim);
   font-size: 0.9rem;
 }
-.educacao-box ul h4 {
+.educacao-box h4 {
   font-weight: 500;
-  margin: 2px 0;
   font-size: 1rem;
 }
 .cursos-box,
 .habilidades {
-  width: auto;
   background-color: var(--cor-principal);
   border-radius: var(--border--radius--padrao);
   border: 1px solid var(--cor-secundaria);
   padding: 15px;
 }
 .cursos-box {
+  width: 25%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 .habilidades {
-  width: 23%;
+  width: 25%;
 }
-.habilidades ul {
+.habilidades .habilidades-container {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.habilidades ul li {
+.habilidades .habilidades-container div {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -589,6 +608,7 @@ main h3 {
   overflow: hidden;
   width: 100px;
   height: 100px;
+  margin-top: 10px;
 }
 .container {
   display: flex;
@@ -597,12 +617,11 @@ main h3 {
 }
 .container img {
   width: 100%;
-  height: 100px;
-  margin-right: 20px;
+  height: 90px;
+  margin-right: 40px;
 }
 .portfolio {
   position: relative;
-  z-index: 333;
 }
 .portfolio-titulo {
   width: 100%;
@@ -640,8 +659,6 @@ main h3 {
 .btn {
   box-sizing: border-box;
   appearance: none;
-  background-color: transparent;
-  border: 2px solid #ff0000;
   border-radius: var(--border--radius--padrao);
   color: white;
   cursor: pointer;
@@ -653,21 +670,64 @@ main h3 {
   text-align: center;
   font-weight: 500;
 }
-.btn:hover,
-.btn:focus {
-  color: #fff;
-  outline: 0;
+.btn-portfolios{
+  border-radius: var(--border--radius--padrao);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 0.95rem;
+  font-weight: normal;
+  padding: 0.5em 1.25em;
+  text-align: center;
+  font-weight: normal;
+  background-color: var(--cor--padraoContorno);
+  border: 1px solid var(--cor--padraoContornoEscuro);
+  transition: 300ms linear;
 }
-.fourth {
-  border-color: var(--cor--padraoContorno);
-  color: #fff;
-  background: linear-gradient(45deg, #2850c3 50%, transparent 50%);
-  background-position: 100%;
-  background-size: 400%;
-  transition: background 600ms ease-in-out;
+.btn-portfolios:hover{
+  border: 1px solid var(--cor--padraoContorno);
+  background-color: transparent;
 }
-.fourth:hover {
-  background-position: 0;
+.btn-vitrine{
+  border-radius: var(--border--radius--padrao);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 0.95rem;
+  font-weight: normal;
+  padding: 0.5em 1.25em;
+  text-align: center;
+  font-weight: normal;
+  background-color: var(--cor--padraoContorno);
+  border: 1px solid var(--cor--padraoContornoEscuro);
+  transition: 300ms linear;
+  text-decoration: none;
+}
+.btn-vitrine:hover{
+  border: 1px solid var(--cor--padraoContorno);
+  background-color: transparent;
+}
+.enviar-mensagem{
+  width: 100%;
+  box-sizing: border-box;
+  appearance: none;
+  border: 2px solid #ff0000;
+  border-radius: var(--border--radius--padrao);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 0.95rem;
+  font-weight: normal;
+  padding: 0.5em 1.25em;
+  text-align: center;
+  font-weight: 500;
+  transition: 300ms;
+}
+.enviar-mensagem:hover{
+  background-color: var(--cor--padraoContorno);
 }
 .tipos-portfolios {
   margin-top: 15px;
@@ -736,14 +796,14 @@ main h3 {
   background-color: #000000bb;
   backdrop-filter: blur(5px);
   width: 100%;
-  height: 55%;
+  height: 100%;
   position: absolute;
-  bottom: -55%;
+  bottom: -100%;
   left: 0;
   border-bottom-left-radius: var(--border--radius--padrao);
   border-bottom-right-radius: var(--border--radius--padrao);
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 10px;
   transition: bottom 0.5s;
   border-top: 3px solid var(--cor--padraoContorno);
@@ -768,15 +828,25 @@ main h3 {
   align-items: center;
   justify-content: center;
 }
+.btn-dark{
+  width: 100%;
+}
+.btn-dark img{
+  width: 16px;
+ height: 16px; 
+}
 .contato-titulo {
   width: 100%;
   padding: 15px;
   background-color: var(--cor-principal);
 }
 .contato-titulo p {
-  font-size: 0.9rem;
+  font-size: 14px;
   color: var(--cor--textoSobreMim);
   line-height: 1.5;
+}
+.sistema h4{
+  font-size: 15px;
 }
 .contato-box {
   width: 100%;
@@ -905,10 +975,8 @@ main h3 {
   align-items: center;
 }
 .info-img img {
-  background-color: white;
-  object-fit: contain;
-  border-radius: 100%;
-  border: 1px solid var(--cor--padrao);
+  width: 40px;
+  height: 40px;
 }
 .info-redes {
   margin-top: 20px;
@@ -994,6 +1062,33 @@ main h3 {
     border-bottom-right-radius: var(--border--radius--padrao);
     border-right: 5px solid var(--cor--padraoContorno);
   }
+  .conversar-mobile{
+    padding: 7px 35px;
+    font-size: 1rem;
+    color: var(--cor--padrao);
+    border: 1px solid var(--cor--padraoContorno);
+    border-radius: var(--border--radius--padrao);
+    cursor: pointer;
+    font-family: var(--texto-padrao);
+    font-weight: 400;
+    font-style: bold;
+    transition: ease 400ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--cor--padraoContorno);
+    color: var(--cor--padrao);
+    font-weight: 500;
+    transition: linear 500ms;
+    text-decoration: none;
+  }
+  .button-menu-mobile{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   .menu-box a {
     width: 100%;
     height: 100%;
@@ -1003,6 +1098,7 @@ main h3 {
     justify-content: center;
     transition: linear 500ms;
     font-size: 1rem;
+    text-decoration: none;
   }
   .menu-box a:hover {
     background-color: var(--cor--padraoContorno);
@@ -1061,4 +1157,12 @@ main h3 {
   main {
     padding-top: 7vh;
   }
+}
+.carousel-item img{
+  width: 100%;
+  height: 100%;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+  background-color:var(--cor--padraoContorno);
+  border-radius: 100%;
 }

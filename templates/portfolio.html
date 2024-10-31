@@ -7,6 +7,8 @@
     <link rel="shortcut icon" type="image-x/png" href="../static/image/icon.ico">
     <title>{% block title %}Vinicius Ferreira{% endblock %}</title>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
   </head>
   <body>
@@ -22,10 +24,10 @@
         </p>
       </div>
       <div class="selecionar-portfolios">
-        <button class="porfolios-btn btn fourth">Portfólios</button>
-        <button class="jogos-btn btn fourth">Jogos</button>
-        <button class="servicos-btn btn fourth">Site de Serviços</button>
-        <button class="instituicao-btn btn fourth">Sites Institucionais</button>
+        <button class="porfolios-btn btn-portfolios">Portfólios</button>
+        <button class="jogos-btn btn-portfolios">Jogos</button>
+        <button class="servicos-btn btn-portfolios">Site de Serviços</button>
+        <button class="instituicao-btn btn-portfolios">Sites Institucionais</button>
       </div>
       <div class="tipos-portfolios">
         <div class="portfolios-box">
@@ -42,7 +44,7 @@
                   habilidades. Apresentando uma seleção dos meus conhecimentos e
                   formações.
                 </p>
-                <a target="_blank" class="btn fourth" href="https://viniciusferreira.netlify.app/">Ver site </a>
+                <a target="_blank" class="btn-vitrine" href="https://viniciusferreira.netlify.app/">Ver site </a>
               </div>
             </div>
             <div class="vitrine-box">
@@ -58,7 +60,7 @@
                 </p>
                 <a
                   target="_blank"
-                  class="btn fourth"
+                  class="btn-vitrine"
                   href="https://viniciusferreiraportfolio.netlify.app/"
                   >Ver site
                 </a>
@@ -80,7 +82,7 @@
                 </p>
                 <a
                   target="_blank"
-                  class="btn fourth"
+                  class="btn-vitrine"
                   href="https://jogodomario.netlify.app/"
                   >Ver site
                 </a>
@@ -98,7 +100,7 @@
                 </p>
                 <a
                   target="_blank"
-                  class="btn fourth"
+                  class="btn-vitrine"
                   href="https://gamepokedex.netlify.app/"
                   >Ver site
                 </a>
@@ -110,25 +112,55 @@
           <div class="vitrine">
             <div class="vitrine-box">
               <div class="vitrine-img">
+                <img src="../static/image/controle/3.png" alt="" />
+              </div>
+              <div class="vitrine-txt sistema">
+                <h5>Sistema de controle de equipamentos</h5>
+                <p>
+                  Sistema desenvolvido para o controle de equipamentos fazendo com que o usuário cadastre a localização dos equipamentos e servindo
+                  para eventuais chekouts. Ulizando HTML, CSS, JavaScript, SQL e Python. 
+                </p>
+                <a
+                  class="btn-vitrine" data-bs-toggle="modal" data-bs-target="#exampleModal5"
+                  >Visualizar imagens
+                </a>
+                <a href="https://github.com/ViniciusBfm/Controle" class="btn btn-dark rounded-pill" target="_blank" rel="noopener noreferrer">Ver Github</a>
+              </div>
+            </div>
+            <div class="vitrine-box">
+              <div class="vitrine-img">
+                <img src="../static/image/repros.png" alt="" />
+              </div>
+              <div class="vitrine-txt sistema">
+                <h5>Sistema Repros - PHP</h5>
+                <p>
+                  Sistema muito mais completo que o anterior, desenvolvido com HTML, CSS, bootstrap, JavaScript, SQL e PHP. 
+                  Possui funcionalidades muito mais complexas atendendo assim todas as necessidades dos usuários.
+                </p>
+                <a
+                  class="btn-vitrine" data-bs-toggle="modal" data-bs-target="#exampleModal4"
+                  >Visualizar imagens
+                </a>
+                <a href="https://github.com/ViniciusBfm/REPROS" class="btn btn-dark rounded-pill" target="_blank" rel="noopener noreferrer">Ver Github</a>
+              </div>
+            </div>
+            <div class="vitrine-box">
+              <div class="vitrine-img">
                 <img src="../static/image/img5.png" alt="" />
               </div>
               <div class="vitrine-txt sistema">
-                <h5>Sistema de reprografia</h5>
+                <h5>Sistema de reprografia - Flask</h5>
                 <p>
                   Sistema abrangente para solicitações e gestão de reprografia, 
                   desenvolvido com HTML, CSS, JavaScript, SQL e Python. Os usuários 
                   podem aprovar ou negar pedidos, alterar entre diferentes perfis, 
                   gerenciar solicitações por meio de relatórios e muito mais.
                 </p>
-                <h4>Acesse pelo login:</h4>
-                <p style="color: white;" >Login: administrador</p>
-                <p style="color: white;" >Senha: Br@sil1234</p>
                 <a
-                  target="_blank"
-                  class="btn fourth"
-                  href="https://reprografia.up.railway.app/login"
-                  >Ver site
+                  class="btn-vitrine" data-bs-toggle="modal" data-bs-target="#exampleModal3"
+                  >Visualizar imagens
                 </a>
+                <a href="https://github.com/ViniciusBfm/Reprografia" class="btn btn-dark rounded-pill" target="_blank" rel="noopener noreferrer">Ver Github</a>
               </div>
             </div>
             <div class="vitrine-box">
@@ -136,22 +168,17 @@
                 <img src="../static/image/img6.png" alt="" />
               </div>
               <div class="vitrine-txt sistema">
-                <h5>Sistema de avaliação de filmes</h5>
+                <h5>PegaVisão - Avalidor de filmes</h5>
                 <p>
-                  Descubra, avalie e compartilhe suas opiniões sobre filmes! Nosso sistema, 
+                  Descubra, avalie e compartilhe suas opiniões sobre filmes! Nesse sistema, 
                   desenvolvido com HTML, CSS, JavaScript, Python e SQL, é o lugar ideal para 
-                  encontrar informações e críticas sobre seus filmes favoritos. 
-                  Explore recomendações personalizadas e mergulhe no mundo do cinema conosco
+                  encontrar informações e críticas sobre seus filmes favoritos.
                 </p>
-                <h4>Acesse pelo login:</h4>
-                <p style="color: white;" >Login: convidado@yopmail.com</p>
-                <p style="color: white;" >Senha: Brasil@1234</p>
                 <a
-                  target="_blank"
-                  class="btn fourth"
-                  href="https://pegavisao.up.railway.app/home"
-                  >Ver site
+                  class="btn-vitrine" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                  >Visualizar imagens
                 </a>
+                <a href="https://github.com/ViniciusBfm/PegaVisaoFilmes" class="btn btn-dark rounded-pill" target="_blank" rel="noopener noreferrer">Ver Github</a>
               </div>
             </div>
             <div class="vitrine-box">
@@ -159,28 +186,59 @@
                 <img src="../static/image/img9.png" alt="" />
               </div>
               <div class="vitrine-txt">
-                <h5>Sistema filmes</h5>
+                <h5>Cartax - API de filmes</h5>
                 <p>
                   Este site utiliza uma API de filmes para apresentar informações detalhadas 
                   sobre orçamento, faturamento, duração e sinopse dos principais filmes da atualidade.
                 </p>
-                <a
-                  target="_blank"
-                  class="btn fourth"
-                  href="https://cartaxfilmes.netlify.app/"
-                  >Ver site
+               <a
+                  class="btn-vitrine" data-bs-toggle="modal" data-bs-target="#exampleModal1"
+                  >Visualizar imagens
                 </a>
+                <a href="https://github.com/ViniciusBfm/Cartax-Online" class="btn btn-dark rounded-pill" target="_blank" rel="noopener noreferrer">Ver Github</a>
+              </div>
+            </div>
+            <div class="vitrine-box">
+              <div class="vitrine-img">
+                <img src="../static/image/ieaat/5.png" alt="" />
+              </div>
+              <div class="vitrine-txt sistema">
+                <h5>Ieaat - Comidas</h5>
+                <p>
+                  Sistema foi desenvolvido como uma paródia do iFood, utilizando HTML, CSS e JavaScript. O projeto foi uma das minhas primeiras experiências na criação de websites e consistiu em um sistema simples para solicitar comidas.
+                </p>
+                <a
+                  class="btn-vitrine" data-bs-toggle="modal" data-bs-target="#exampleModal0"
+                  >Visualizar imagens
+                </a>
+                <a href="https://github.com/ViniciusBfm/EaatFast-Git" class="btn btn-dark rounded-pill" target="_blank" rel="noopener noreferrer">Ver Github</a>
               </div>
             </div>
           </div>
         </div>
         <div class="instituicao-box">
           <div class="vitrine">
+            <div class="vitrine-box">
+              <div class="vitrine-img">
+                <img src="../static/image/MVC.png" alt="" />
+              </div>
+              <div class="vitrine-txt sistema">
+                <h5>Projeto MVC</h5>
+                <p>
+                  Site simples usando HTML, CSS, PHP, SQL e bootstrap.  
+                </p>
+                <a
+                  class="btn-vitrine" data-bs-toggle="modal" data-bs-target="#exampleModal6"
+                  >Visualizar imagens
+                </a>
+                <a href="https://github.com/ViniciusBfm/MVC" class="btn btn-dark rounded-pill" target="_blank" rel="noopener noreferrer">Ver Github</a>
+              </div>
+            </div>
             <div class="vitrine-box ">
               <div class="vitrine-img">
                 <img src="../static/image/img8.png" alt="" />
               </div>
-              <div class="vitrine-txt sistema2">
+              <div class="vitrine-txt sistema">
                 <h5>Site de clínica medica</h5>
                 <p>
                   Este projeto destaca um site empresarial para consultas médicas, 
@@ -190,7 +248,7 @@
                 </p>
                 <a
                   target="_blank"
-                  class="btn fourth"
+                  class="btn-vitrine"
                   href="https://clinicahealthmedical.netlify.app/"
                   >Ver site
                 </a>
@@ -210,7 +268,7 @@
                 </p>
                 <a
                   target="_blank"
-                  class="btn fourth"
+                  class="btn-vitrine"
                   href="https://rmveiculoscurso.netlify.app/"
                   >Ver site
                 </a>
@@ -220,7 +278,404 @@
           </div>
         </div>
       </div>
+      <!-- Button trigger modal -->
+
+<!-- Modals  -->
+<div class="modal fade" id="exampleModal0" tabindex="-1" aria-labelledby="exampleModalLabel0" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Ieaat - Comidas</h1>
+        <div data-bs-theme="dark" class="ms-auto">
+          <button type="button" data-bs-theme="dark" class="btn-close " data-bs-dismiss="modal"
+              aria-label="Close"></button>
+      </div>
+      </div>
+      <div class="modal-body">
+        <div id="carouselExample0" class="carousel slide">
+          <div class="carousel-inner  text-center">
+            <div class="carousel-item active">
+              <img src="../static/image/ieaat/3.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/ieaat/4.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/ieaat/5.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/ieaat/6.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/ieaat/7.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/ieaat/8.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/ieaat/9.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/ieaat/10.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/ieaat/11.png" alt="" />
+            </div>
+
+          </div>
+          <button class="carousel-control-prev" type="button"  data-bs-target="#carouselExample0" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample0" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <a href="https://github.com/ViniciusBfm/EaatFast-Git" target="_blank" rel="noopener noreferrer" class="btn btn-primary bg-dark">Github</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Cartax - API de filmes</h1>
+        <div data-bs-theme="dark" class="ms-auto">
+          <button type="button" data-bs-theme="dark" class="btn-close " data-bs-dismiss="modal"
+              aria-label="Close"></button>
+      </div>
+      </div>
+      <div class="modal-body">
+        <div id="carouselExample1" class="carousel slide">
+          <div class="carousel-inner  text-center">
+            <div class="carousel-item active">
+              <img src="../static/image/cartax/3.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/cartax/4.png" alt="" />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button"  data-bs-target="#carouselExample1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <a href="https://github.com/ViniciusBfm/Cartax-Online" target="_blank" rel="noopener noreferrer" class="btn btn-primary bg-dark">Github</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">PegaVisão - Avalidor de filmes</h1>
+        <div data-bs-theme="dark" class="ms-auto">
+          <button type="button" data-bs-theme="dark" class="btn-close " data-bs-dismiss="modal"
+              aria-label="Close"></button>
+      </div>
+      </div>
+      <div class="modal-body">
+        <div id="carouselExample2" class="carousel slide">
+          <div class="carousel-inner  text-center">
+            <div class="carousel-item active">
+              <img src="../static/image/pegavisao/3.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/pegavisao/4.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/pegavisao/5.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/pegavisao/6.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/pegavisao/7.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/pegavisao/8.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/pegavisao/9.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/pegavisao/10.png" alt="" />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button"  data-bs-target="#carouselExample2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <a href="https://github.com/ViniciusBfm/PegaVisaoFilmes" target="_blank" rel="noopener noreferrer" class="btn btn-primary bg-dark">Github</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Sistema de reprografia - Flask</h1>
+        <div data-bs-theme="dark" class="ms-auto">
+          <button type="button" data-bs-theme="dark" class="btn-close " data-bs-dismiss="modal"
+              aria-label="Close"></button>
+      </div>
+      </div>
+      <div class="modal-body">
+        <div id="carouselExample3" class="carousel slide">
+          <div class="carousel-inner  text-center">
+            <div class="carousel-item active">
+              <img src="../static/image/reprografia/3.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/reprografia/4.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/reprografia/5.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/reprografia/6.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/reprografia/7.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/reprografia/8.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/reprografia/9.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/reprografia/10.png" alt="" />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button"  data-bs-target="#carouselExample3" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <a href="https://github.com/ViniciusBfm/Reprografia" target="_blank" rel="noopener noreferrer" class="btn btn-primary bg-dark">Github</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Sistema REPROS - PHP</h1>
+        <div data-bs-theme="dark" class="ms-auto">
+          <button type="button" data-bs-theme="dark" class="btn-close " data-bs-dismiss="modal"
+              aria-label="Close"></button>
+      </div>
+      </div>
+      <div class="modal-body">
+        <div id="carouselExample4" class="carousel slide">
+          <div class="carousel-inner  text-center">
+            <div class="carousel-item active">
+              <img src="../static/image/repros/3.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/repros/4.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/repros/5.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/repros/6.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/repros/7.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/repros/8.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/repros/9.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/repros/10.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/repros/11.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/repros/12.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/repros/13.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/repros/14.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/repros/15.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/repros/16.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/repros/17.png" alt="" />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button"  data-bs-target="#carouselExample4" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample4" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <a href="https://github.com/ViniciusBfm/REPROS" target="_blank" rel="noopener noreferrer" class="btn btn-primary bg-dark">Github</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Sistema de controle de equipamentos</h1>
+        <div data-bs-theme="dark" class="ms-auto">
+          <button type="button" data-bs-theme="dark" class="btn-close " data-bs-dismiss="modal"
+              aria-label="Close"></button>
+      </div>
+      </div>
+      <div class="modal-body">
+        <div id="carouselExample5" class="carousel slide">
+          <div class="carousel-inner  text-center">
+            <div class="carousel-item active">
+              <img src="../static/image/controle/3.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/controle/4.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/controle/5.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/controle/6.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/controle/7.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/controle/8.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/controle/9.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/controle/10.png" alt="" />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button"  data-bs-target="#carouselExample5" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample5" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <a href="https://github.com/ViniciusBfm/Controle" target="_blank" rel="noopener noreferrer" class="btn btn-primary bg-dark">Github</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel6" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Sistema de controle de equipamentos</h1>
+        <div data-bs-theme="dark" class="ms-auto">
+          <button type="button" data-bs-theme="dark" class="btn-close " data-bs-dismiss="modal"
+              aria-label="Close"></button>
+      </div>
+      </div>
+      <div class="modal-body">
+        <div id="carouselExample6" class="carousel slide">
+          <div class="carousel-inner  text-center">
+            <div class="carousel-item active">
+              <img src="../static/image/MVC/3.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/MVC/4.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/MVC/5.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/MVC/6.png" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../static/image/MVC/7.png" alt="" />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button"  data-bs-target="#carouselExample6" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample6" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <a href="https://github.com/ViniciusBfm/MVC" target="_blank" rel="noopener noreferrer" class="btn btn-primary bg-dark">Github</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
     </main>
+
+
     {% endblock %}
   </body>
+
 </html>
+
