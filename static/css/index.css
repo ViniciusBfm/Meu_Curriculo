@@ -1052,7 +1052,7 @@ main h3 {
     gap: 3px;
     background-color: var(--cor-principal);
     position: absolute;
-    top: 9vh;
+    top: 51px;
     left: -280px;
     width: 50%;
     max-width: 280px;
@@ -1086,6 +1086,7 @@ main h3 {
   }
   .button-menu-mobile{
     width: 100%;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
