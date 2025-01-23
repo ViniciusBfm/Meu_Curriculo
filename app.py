@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, send_file
 from config import email,senha
 from flask_mail import Message, Mail
-import distutils.core
+
 
 app = Flask(__name__)
 app.secret_key = 'meu_perfil_secreto'
